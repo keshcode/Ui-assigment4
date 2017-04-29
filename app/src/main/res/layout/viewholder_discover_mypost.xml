@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivDiscover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/paris" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDark"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:gravity="center"
+                android:text="Explore Pairs"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/spacing_tiny"
+                android:drawablePadding="@dimen/spacing_tiny"
+                android:drawableStart="@drawable/location_icon"
+                android:gravity="center"
+                android:paddingEnd="@dimen/spacing_tiny"
+                android:text="Paris"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/tvEdit"
+                android:padding="@dimen/spacing_tiny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/spacing_normal"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:drawableStart="@drawable/icon_trash" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="@dimen/spacing_tiny"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/tvEdit"
+                android:drawableStart="@drawable/icon_edit"
+                android:textColor="@color/colorAccent" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivDiscover"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/spacing_small"
+            android:background="@drawable/button_back_ground"
+            android:padding="@dimen/spacing_tiny"
+            android:text="Send Request"
+            android:textColor="@color/colorAccent" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivDiscover"
+            android:layout_margin="@dimen/spacing_small" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_xsmall"
+        android:layout_marginStart="@dimen/spacing_xsmall"
+        android:layout_marginTop="@dimen/spacing_tiny">
+
+        <ImageView
+            android:id="@+id/ivAddImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_image_icon" />
+
+        <TextView
+            android:id="@+id/tvTravler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_small"
+            android:layout_toEndOf="@+id/ivAddImage"
+            android:paddingBottom="@dimen/spacing_xsmall"
+            android:text="john" />
+
+        <TextView
+            android:id="@+id/tvduration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvComment"
+            android:layout_toStartOf="@+id/tvComment"
+            android:drawablePadding="@dimen/spacing_tiny"
+            android:drawableStart="@drawable/icon_timer"
+            android:gravity="center"
+            android:text="6d 2h left"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:drawableStart="@drawable/icon_comment"
+            android:gravity="center"
+            android:text="222 Reviews"
+            android:textSize="@dimen/font_small" />
+
+        <android.support.v7.widget.AppCompatRatingBar
+            style="?android:ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvTravler"
+            android:layout_alignBottom="@+id/tvduration"
+            android:layout_marginStart="@dimen/spacing_tiny"
+            android:layout_toEndOf="@+id/ivAddImage"
+            android:numStars="6"
+            android:paddingTop="@dimen/spacing_tiny" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_xsmall"
+        android:layout_marginStart="@dimen/spacing_xsmall"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur lorem ipsum."
+            android:textSize="@dimen/font_small" />
+
+    </LinearLayout>
+</LinearLayout>

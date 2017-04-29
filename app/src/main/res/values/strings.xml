@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Iblive</string>
+    <string name="discover">Discover</string>
+    <string name="map">Map</string>
+    <string name="my_posts">My Posts</string>
+    <string name="requests">Requests</string>
+    <string name="my_network">My Network</string>
+    <string name="search_discover">Where would you like to connect?</string>
+    <string name="home">Home</string>
+    <string name="cardsSubscription">Cards/Subscription</string>
+    <string name="support">Support</string>
+    <string name="myrequests">My Requests</string>
+    <string name="share">Share</string>
+    <string name="logout">Logout</string>
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="7"
+    android:background="@color/colorShadow">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@color/colorPrimaryDark" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/paris" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        style="@style/DrawerTvStyle"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/spacing_tiny"
+        android:text="john"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/font_xlarge" />
+
+    <TextView
+        style="@style/DrawerTvStyle"
+        android:drawableEnd="@drawable/edit_icon"
+        android:gravity="center"
+        android:paddingStart="@dimen/spacing_large"
+        android:drawablePadding="@dimen/spacing_tiny"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:text="Paris" />
+
+    <LinearLayout style="@style/DrawerllStyle">
+
+        <TextView
+            style="@style/DrawerTvStyle"
+            android:drawableEnd="@drawable/home_icon"
+            android:text="@string/home" />
+
+        <TextView
+            style="@style/DrawerTvStyle"
+            android:drawableEnd="@drawable/card_icon"
+            android:text="@string/cardsSubscription" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/DrawerllStyle">
+
+        <TextView
+            style="@style/DrawerTvStyle"
+            android:drawableEnd="@drawable/phone_icon"
+            android:text="@string/support" />
+
+        <TextView
+            style="@style/DrawerTvStyle"
+            android:drawableEnd="@drawable/profile_icon_3"
+            android:text="@string/myrequests" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/DrawerllStyle">
+
+        <TextView
+            style="@style/DrawerTvStyle"
+            android:drawableEnd="@drawable/profile_icon"
+            android:text="@string/share" />
+
+        <TextView
+            style="@style/DrawerTvStyle"
+            android:drawableEnd="@drawable/profile_icon_2"
+            android:text="@string/logout" />
+    </LinearLayout>
+</LinearLayout>
+
+
+

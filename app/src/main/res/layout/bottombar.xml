@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_alignParentBottom="true"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="horizontal"
+    >
+
+    <TextView
+        style="@style/Bottombartv"
+        android:drawableTop="@drawable/discover_icon"
+        android:text="@string/discover" />
+
+    <TextView
+        style="@style/Bottombartv"
+        android:drawableTop="@drawable/map"
+        android:text="@string/map" />
+
+    <TextView
+        style="@style/Bottombartv"
+        android:drawableTop="@drawable/my_post"
+        android:text="@string/my_posts" />
+
+    <TextView
+        style="@style/Bottombartv"
+        android:drawableTop="@drawable/request"
+        android:text="@string/requests" />
+
+    <TextView
+        style="@style/Bottombartv"
+        android:drawableTop="@drawable/my_network"
+        android:layout_weight="1.04"
+        android:text="@string/my_network" />
+
+</LinearLayout>

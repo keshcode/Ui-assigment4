@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/ivMenu"
+        style="@style/Toolbariv"
+        android:src="@drawable/burger" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/ivMenu"
+        android:layout_toStartOf="@+id/ivlist" />
+
+    <ImageView
+        android:id="@+id/ivGrigView"
+        style="@style/Toolbariv"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/grid_view" />
+
+    <ImageView
+        android:id="@+id/ivlist"
+        style="@style/Toolbariv"
+        android:layout_alignBottom="@+id/ivGrigView"
+        android:layout_toStartOf="@+id/ivGrigView"
+        android:src="@drawable/sorti" />
+
+
+</RelativeLayout>
