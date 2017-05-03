@@ -6,4 +6,5 @@
     <color name="colorStrongDark">#000000</color>
     <color name="colorAccent">#ffffff</color>
     <color name="colorShadow">#f8f9fa</color>
+    <color name="colorReject">#d0011b</color>
 </resources>

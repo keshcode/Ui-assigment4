@@ -10,6 +10,7 @@ import com.example.keshav.iblive.fragment.DiscoverFragment;
 import com.example.keshav.iblive.fragment.MapRequestFragment;
 import com.example.keshav.iblive.fragment.MyNetworkFragment;
 import com.example.keshav.iblive.fragment.MyPostFragment;
+import com.example.keshav.iblive.fragment.NewRequest;
 
 public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
@@ -33,13 +34,17 @@ public class MainActivity extends AppCompatActivity {
                     MyNetworkFragment myNetworkFragment = new MyNetworkFragment();
                     return myNetworkFragment;
                 }
-                MapRequestFragment mapRequestFragment = new MapRequestFragment();
-                return mapRequestFragment;
+                else if(position == 3) {
+                    MapRequestFragment mapRequestFragment = new MapRequestFragment();
+                    return mapRequestFragment;
+                }
+                NewRequest newRequest = new NewRequest();
+                return newRequest;
             }
 
             @Override
             public int getCount() {
-                return 4;
+                return 5;
             }
         };
         viewPager.setAdapter(mStatePagerAdapter);

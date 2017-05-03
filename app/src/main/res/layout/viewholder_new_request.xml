@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:layout_marginEnd="@dimen/spacing_normal"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/spacing_xlarge"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:background="@drawable/curved_boundry">
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ivProfile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/paris"
+            app:civ_border_color="@color/colorShadow"
+            app:civ_border_width="4dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvProfileDiscription"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/spacing_tiny">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/spacing_normal"
+                android:background="@drawable/curved_round_green_button"
+                android:padding="@dimen/spacing_small"
+                android:paddingEnd="@dimen/spacing_normal"
+                android:paddingStart="@dimen/spacing_normal"
+                android:text="@string/accept"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_normal"
+                android:background="@drawable/curved_round_red_button"
+                android:padding="@dimen/spacing_small"
+                android:paddingEnd="@dimen/spacing_normal"
+                android:paddingStart="@dimen/spacing_medium"
+                android:text="@string/reject"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font_large" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvExploreLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llProfileName"
+            android:layout_centerHorizontal="true"
+
+            android:drawablePadding="@dimen/spacing_tiny"
+            android:drawableStart="@drawable/ic_location_on_black_24dp"
+            android:gravity="center"
+            android:padding="@dimen/spacing_tiny"
+            android:text="Explore Paris" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/curved_onside_button"
+            android:padding="@dimen/spacing_tiny"
+            android:paddingStart="@dimen/spacing_normal"
+            android:layout_marginEnd="@dimen/spacing_normal"
+            android:text="Show On Map"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/tvExploreDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvExploreLocation"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="@dimen/spacing_tiny"
+            android:drawableStart="@drawable/icon_timer"
+            android:padding="@dimen/spacing_tiny"
+            android:text="6d 2h left" />
+
+        <TextView
+            android:id="@+id/tvProfileDiscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvExploreDuration"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="@dimen/spacing_small"
+            android:drawableStart="@drawable/icon_explore"
+            android:padding="@dimen/spacing_tiny"
+            android:text="Lorem ipsum is just the dummy \n text used in print typeseting" />
+
+
+        <LinearLayout
+            android:id="@+id/llProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivProfile"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/spacing_tiny">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John" />
+
+            <RatingBar
+                android:id="@+id/rbCard"
+                style="?android:ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_tiny"
+                android:isIndicator="false" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

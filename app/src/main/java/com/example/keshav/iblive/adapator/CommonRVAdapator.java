@@ -35,6 +35,10 @@ public class CommonRVAdapator extends RecyclerView.Adapter<CommonRVAdapator.View
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_mynetwork, parent, false);
             return new ViewHolder(view);
         }
+        else if(mode == MODE_NEW_REQUEST){
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_new_request,parent,false);
+            return new ViewHolder(view);
+        }
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_discover_mypost, parent, false);
         return new ViewHolder(view);
 
