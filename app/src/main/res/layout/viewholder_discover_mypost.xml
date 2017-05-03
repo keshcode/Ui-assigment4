@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/spacing_small"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -23,6 +24,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvCardHeading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -32,19 +34,20 @@
                 android:textColor="@color/colorAccent" />
 
             <TextView
+                android:id="@+id/tvCardLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_margin="@dimen/spacing_tiny"
                 android:drawablePadding="@dimen/spacing_tiny"
                 android:drawableStart="@drawable/location_icon"
-                android:gravity="center"
+                android:layout_centerVertical="true"
                 android:paddingEnd="@dimen/spacing_tiny"
                 android:text="Paris"
                 android:textColor="@color/colorAccent" />
 
             <TextView
-                android:id="@+id/tvEdit"
+                android:id="@+id/tvCardDel"
                 android:padding="@dimen/spacing_tiny"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,18 +58,20 @@
                 android:drawableStart="@drawable/icon_trash" />
 
             <TextView
+                android:id="@+id/tvCardEdit"
                 android:layout_width="wrap_content"
                 android:padding="@dimen/spacing_tiny"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerVertical="true"
-                android:layout_toStartOf="@+id/tvEdit"
+                android:layout_toStartOf="@+id/tvCardDel"
                 android:drawableStart="@drawable/icon_edit"
                 android:textColor="@color/colorAccent" />
 
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/tvSendRequest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/ivDiscover"
@@ -78,6 +83,7 @@
             android:textColor="@color/colorAccent" />
 
         <Switch
+            android:id="@+id/swCardSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/ivDiscover"
@@ -128,8 +134,9 @@
             android:text="222 Reviews"
             android:textSize="@dimen/font_small" />
 
-        <android.support.v7.widget.AppCompatRatingBar
+        <RatingBar
             style="?android:ratingBarStyleSmall"
+            android:id="@+id/rbCard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/tvTravler"
@@ -137,6 +144,7 @@
             android:layout_marginStart="@dimen/spacing_tiny"
             android:layout_toEndOf="@+id/ivAddImage"
             android:numStars="6"
+            android:isIndicator="false"
             android:paddingTop="@dimen/spacing_tiny" />
     </RelativeLayout>
 
@@ -148,6 +156,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tvCardContant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur lorem ipsum."

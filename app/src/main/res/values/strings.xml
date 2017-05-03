@@ -12,4 +12,11 @@
     <string name="myrequests">My Requests</string>
     <string name="share">Share</string>
     <string name="logout">Logout</string>
+    <string name="connect">Connect</string>
+    <string name="google_maps_api_key">AIzaSyDaG0IAFzMVb93Q6klmFNm1_n2U4WBeSLw</string>
+    <string name="title_location_permission">GPS Permission</string>
+    <string name="text_location_permission">GPS is required to be enabled for this section to get your location</string>
+    <string name="ok">OK</string>
+    <string name="location">Location</string>
+    <string name="send_request">Send Request</string>
 </resources>

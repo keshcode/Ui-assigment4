@@ -49,5 +49,8 @@
         <item name="android:layout_marginBottom">@dimen/spacing_large</item>
     </style>
 
-
+    <style name="CustomRatingBar">
+        <item name="android:colorControlActivated">#f6a623</item>
+        <item name="android:colorControlNormal">#b7b7b7</item>
+    </style>
 </resources>

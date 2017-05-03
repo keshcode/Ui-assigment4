@@ -1,91 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="7"
-    android:background="@color/colorShadow">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3">
+        android:layout_height="match_parent"
+        android:background="@color/colorShadow"
+        android:orientation="vertical"
+        android:weightSum="9">
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:src="@color/colorPrimaryDark" />
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:baselineAligned="false">
 
-        <FrameLayout
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        android:weightSum="9">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:src="@drawable/paris" />
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/profile_image"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7">
+
+            <TextView
+                android:id="@+id/tvProfileName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/paris" />
-        </FrameLayout>
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/spacing_small"
+                android:text="John"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/font_xlarge" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/tvProfilelocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Paris"
+                android:layout_below="@+id/tvProfileName"
+                android:paddingBottom="@dimen/spacing_large"
+                android:textSize="@dimen/font_normal" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/edit_icon"
+                android:paddingTop="@dimen/spacing_large"
+                android:paddingEnd="@dimen/spacing_normal"/>
 
-    <TextView
-        style="@style/DrawerTvStyle"
-        android:gravity="center"
-        android:layout_marginTop="@dimen/spacing_tiny"
-        android:text="john"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/font_xlarge" />
+            <LinearLayout
+                android:id="@+id/llHomeCards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvProfilelocation"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:background="@color/colorAccent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/spacing_medium"
+                android:paddingStart="@dimen/spacing_medium">
 
-    <TextView
-        style="@style/DrawerTvStyle"
-        android:drawableEnd="@drawable/edit_icon"
-        android:gravity="center"
-        android:paddingStart="@dimen/spacing_large"
-        android:drawablePadding="@dimen/spacing_tiny"
-        android:layout_marginBottom="@dimen/spacing_large"
-        android:text="Paris" />
+                <TextView
+                    style="@style/DrawerTvStyle"
+                    android:drawableEnd="@drawable/home_icon"
+                    android:text="@string/home" />
 
-    <LinearLayout style="@style/DrawerllStyle">
+                <TextView
+                    style="@style/DrawerTvStyle"
+                    android:drawableEnd="@drawable/card_icon"
+                    android:text="@string/cardsSubscription" />
+            </LinearLayout>
 
-        <TextView
-            style="@style/DrawerTvStyle"
-            android:drawableEnd="@drawable/home_icon"
-            android:text="@string/home" />
+            <LinearLayout
+                android:id="@+id/llSupportRequest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llHomeCards"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:background="@color/colorAccent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/spacing_medium"
+                android:paddingStart="@dimen/spacing_medium">
 
-        <TextView
-            style="@style/DrawerTvStyle"
-            android:drawableEnd="@drawable/card_icon"
-            android:text="@string/cardsSubscription" />
+                <TextView
+                    style="@style/DrawerTvStyle"
+                    android:drawableEnd="@drawable/phone_icon"
+                    android:text="@string/support" />
+
+                <TextView
+                    style="@style/DrawerTvStyle"
+                    android:drawableEnd="@drawable/profile_icon_3"
+                    android:text="@string/myrequests" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llShareLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llSupportRequest"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:background="@color/colorAccent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/spacing_medium"
+                android:paddingStart="@dimen/spacing_medium">
+
+                <TextView
+                    style="@style/DrawerTvStyle"
+                    android:drawableEnd="@drawable/profile_icon"
+                    android:text="@string/share" />
+
+                <TextView
+                    style="@style/DrawerTvStyle"
+                    android:drawableEnd="@drawable/profile_icon_2"
+                    android:text="@string/logout" />
+            </LinearLayout>
+
+        </RelativeLayout>
     </LinearLayout>
 
-    <LinearLayout style="@style/DrawerllStyle">
-
-        <TextView
-            style="@style/DrawerTvStyle"
-            android:drawableEnd="@drawable/phone_icon"
-            android:text="@string/support" />
-
-        <TextView
-            style="@style/DrawerTvStyle"
-            android:drawableEnd="@drawable/profile_icon_3"
-            android:text="@string/myrequests" />
-    </LinearLayout>
-
-    <LinearLayout style="@style/DrawerllStyle">
-
-        <TextView
-            style="@style/DrawerTvStyle"
-            android:drawableEnd="@drawable/profile_icon"
-            android:text="@string/share" />
-
-        <TextView
-            style="@style/DrawerTvStyle"
-            android:drawableEnd="@drawable/profile_icon_2"
-            android:text="@string/logout" />
-    </LinearLayout>
-</LinearLayout>
-
-
-
+</FrameLayout>
