@@ -19,6 +19,7 @@ import com.example.keshav.iblive.fragment.NewRequest;
 public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
     TextView tvTitle,tvDiscover,tvMap,tvMyPost,tvRequests,tvMyNetwork;
+    TextView colorstab[];
     ImageView ivGrid,ivList;
 
     @Override
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             public Fragment getItem(final int position) {
                 if (position == 0) {
                      DiscoverFragment discoverFragment = new DiscoverFragment();
+                     tvTitle.setText(R.string.discover);
                     return discoverFragment;
                 } else if (position == 1) {
                     MyPostFragment myPostFragment = new MyPostFragment();
@@ -68,10 +70,28 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
+                ivGrid.setVisibility(View.VISIBLE);
+                ivList.setVisibility(View.VISIBLE);
                 switch(position) {
                     case 0:
-                        Toast.makeText(MainActivity.this, "hello world", Toast.LENGTH_SHORT).show();
                         tvTitle.setText(R.string.discover);
+                        break;
+                    case 1:
+                        tvTitle.setText(R.string.map);
+                        ivGrid.setVisibility(View.INVISIBLE);
+                        ivList.setVisibility(View.INVISIBLE);
+                        break;
+                    case 2:
+                        tvTitle.setText(R.string.my_posts);
+                        ivGrid.setVisibility(View.INVISIBLE);
+                        break;
+                    case 3:
+                        tvTitle.setText(R.string.requests);
+                        break;
+                    case 4:
+                        tvTitle.setText(R.string.my_network);
+                        ivGrid.setVisibility(View.INVISIBLE);
+                        ivList.setVisibility(View.INVISIBLE);
                         break;
                     default:
                         break;
@@ -96,6 +116,5 @@ public class MainActivity extends AppCompatActivity {
         tvMyPost = (TextView) findViewById(R.id.tvMyPost);
         tvRequests = (TextView) findViewById(R.id.tvRequests);
         tvMyNetwork = (TextView) findViewById(R.id.tvMyNetwork);
-
     }
 }
