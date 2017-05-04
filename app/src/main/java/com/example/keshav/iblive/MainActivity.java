@@ -16,20 +16,22 @@ import com.example.keshav.iblive.fragment.MyNetworkFragment;
 import com.example.keshav.iblive.fragment.MyPostFragment;
 import com.example.keshav.iblive.fragment.NewRequest;
 
+/**
+ * main activty controls the flow of the project
+ */
 public class MainActivity extends AppCompatActivity {
-    ViewPager viewPager;
-    TextView tvTitle,tvDiscover,tvMap,tvMyPost,tvRequests,tvMyNetwork;
-    TextView colorstab[];
-    ImageView ivGrid,ivList,ivPostFilter;
+    private ViewPager viewPager;
+    private TextView tvTitle, tvDiscover, tvMap, tvMyPost, tvRequests, tvMyNetwork;
+    private ImageView ivGrid, ivList, ivPostFilter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
         tvTitle.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(final View v) {
                 Toast.makeText(MainActivity.this, "lol hello", Toast.LENGTH_SHORT).show();
                 tvTitle.setBackgroundResource(R.drawable.selector_bottom_bar_btn);
             }
@@ -38,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public Fragment getItem(final int position) {
                 if (position == 0) {
-                     DiscoverFragment discoverFragment = new DiscoverFragment();
-                     tvTitle.setText(R.string.discover);
+                    DiscoverFragment discoverFragment = new DiscoverFragment();
+                    tvTitle.setText(R.string.discover);
                     return discoverFragment;
                 } else if (position == 2) {
                     MyPostFragment myPostFragment = new MyPostFragment();
@@ -64,16 +66,16 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            public void onPageScrolled(final int position, final float positionOffset, final int positionOffsetPixels) {
 
             }
 
             @Override
-            public void onPageSelected(int position) {
+            public void onPageSelected(final int position) {
                 ivGrid.setVisibility(View.VISIBLE);
                 ivList.setVisibility(View.VISIBLE);
                 ivPostFilter.setVisibility(View.GONE);
-                switch(position) {
+                switch (position) {
                     case 0:
                         tvTitle.setText(R.string.discover);
                         break;
@@ -105,12 +107,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onPageScrollStateChanged(int state) {
+            public void onPageScrollStateChanged(final int state) {
 
             }
         });
     }
 
+    /**
+     * intilize activity variables
+     */
     public void init() {
         viewPager = (ViewPager) findViewById(R.id.vpShowOption);
         tvTitle = (TextView) findViewById(R.id.tvTitle);

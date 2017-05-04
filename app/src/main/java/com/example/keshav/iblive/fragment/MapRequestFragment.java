@@ -51,7 +51,7 @@ public class MapRequestFragment extends Fragment implements OnMapReadyCallback, 
     private GoogleMap mMap;
     private GoogleApiClient mGoogleApiClient;
     private LocationRequest mLocationRequest;
-    private TextView etSearch ;
+    private TextView etSearch;
 
     @Nullable
     @Override
@@ -63,7 +63,12 @@ public class MapRequestFragment extends Fragment implements OnMapReadyCallback, 
         return view;
     }
 
-    private void init(View view) {
+    /**
+     * intilize
+     *
+     * @param view reference to view
+     */
+    private void init(final View view) {
         etSearch = (TextView) view.findViewById(R.id.etSearch);
     }
 
@@ -284,4 +289,8 @@ public class MapRequestFragment extends Fragment implements OnMapReadyCallback, 
     }
 
 
+    @Override
+    public void init() {
+
+    }
 }

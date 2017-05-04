@@ -20,12 +20,17 @@ import com.example.keshav.iblive.constant.Constants;
 public class MyNetworkFragment extends Fragment implements Constants {
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_my_network, container, false);
         CommonRVAdapator commonRVAdapator = new CommonRVAdapator(MODE_MYNETWORK);
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rvCommon);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(commonRVAdapator);
         return view;
+    }
+
+    @Override
+    public void init() {
+
     }
 }

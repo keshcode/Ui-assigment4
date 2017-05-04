@@ -17,6 +17,7 @@ import com.example.keshav.iblive.constant.Constants;
  */
 
 public class CommonRVAdapator extends RecyclerView.Adapter<CommonRVAdapator.ViewHolder> implements Constants {
+    private static final int REPLICATE_COUNT = 10;
     private int mMode;
 
     /**
@@ -34,9 +35,8 @@ public class CommonRVAdapator extends RecyclerView.Adapter<CommonRVAdapator.View
         } else if (mMode == MODE_MYNETWORK) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_mynetwork, parent, false);
             return new ViewHolder(view);
-        }
-        else if(mMode == MODE_NEW_REQUEST){
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_new_request,parent,false);
+        } else if (mMode == MODE_NEW_REQUEST) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_new_request, parent, false);
             return new ViewHolder(view);
         }
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_discover_mypost, parent, false);
@@ -52,17 +52,22 @@ public class CommonRVAdapator extends RecyclerView.Adapter<CommonRVAdapator.View
     @Override
     public int getItemCount() {
         //keeping the recycler view count static
-        return 10;
+        return REPLICATE_COUNT;
+    }
+
+    @Override
+    public void init() {
+
     }
 
     /**
      * inner viewHolder class contians the view to be inflated
      */
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvCardHeading, tvCardLocation, tvCardDel, tvCardEdit, tvSendRequest, tvTravler, tvduration, tvComment, tvCardContant;
-        RatingBar rbCard;
-        Switch swCardSwitch;
-        ImageView ivDiscover, ivAddImage;
+        private TextView tvCardHeading, tvCardLocation, tvCardDel, tvCardEdit, tvSendRequest, tvTravler, tvduration, tvComment, tvCardContant;
+        private RatingBar rbCard;
+        private Switch swCardSwitch;
+        private ImageView ivDiscover, ivAddImage;
 
         /**
          * @param itemView reference of the view to be inflated

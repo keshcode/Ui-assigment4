@@ -5,8 +5,8 @@ package com.example.keshav.iblive.constant;
  */
 
 public interface Constants {
-    int MODE_DISCOVER =1;
-    int MODE_MYPOST =2;
+    int MODE_DISCOVER = 1;
+    int MODE_MYPOST = 2;
     int MODE_MYNETWORK = 3;
     int MODE_NEW_REQUEST = 4;
     int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
@@ -16,4 +16,9 @@ public interface Constants {
     int VALUE = 17;
 
     String TAG = "debug";
+
+    /**
+     * intilize variables here
+     */
+    void init();
 }

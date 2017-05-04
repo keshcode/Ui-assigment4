@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.keshav.iblive.R;
 import com.example.keshav.iblive.adapator.CommonRVAdapator;
@@ -31,4 +30,8 @@ public class DiscoverFragment extends Fragment implements Constants {
         return view;
     }
 
+    @Override
+    public void init() {
+
+    }
 }
