@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     ViewPager viewPager;
     TextView tvTitle,tvDiscover,tvMap,tvMyPost,tvRequests,tvMyNetwork;
     TextView colorstab[];
-    ImageView ivGrid,ivList;
+    ImageView ivGrid,ivList,ivPostFilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +41,13 @@ public class MainActivity extends AppCompatActivity {
                      DiscoverFragment discoverFragment = new DiscoverFragment();
                      tvTitle.setText(R.string.discover);
                     return discoverFragment;
-                } else if (position == 1) {
+                } else if (position == 2) {
                     MyPostFragment myPostFragment = new MyPostFragment();
                     return myPostFragment;
-                } else if (position == 2) {
+                } else if (position == 4) {
                     MyNetworkFragment myNetworkFragment = new MyNetworkFragment();
                     return myNetworkFragment;
-                } else if (position == 3) {
+                } else if (position == 1) {
                     MapRequestFragment mapRequestFragment = new MapRequestFragment();
                     return mapRequestFragment;
                 }
@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 ivGrid.setVisibility(View.VISIBLE);
                 ivList.setVisibility(View.VISIBLE);
+                ivPostFilter.setVisibility(View.GONE);
                 switch(position) {
                     case 0:
                         tvTitle.setText(R.string.discover);
@@ -83,10 +84,14 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 2:
                         tvTitle.setText(R.string.my_posts);
-                        ivGrid.setVisibility(View.INVISIBLE);
+                        ivList.setVisibility(View.GONE);
+                        ivGrid.setVisibility(View.GONE);
+                        ivPostFilter.setVisibility(View.VISIBLE);
                         break;
                     case 3:
-                        tvTitle.setText(R.string.requests);
+                        tvTitle.setText(R.string.new_requests);
+                        ivGrid.setVisibility(View.INVISIBLE);
+                        ivList.setVisibility(View.INVISIBLE);
                         break;
                     case 4:
                         tvTitle.setText(R.string.my_network);
@@ -116,5 +121,6 @@ public class MainActivity extends AppCompatActivity {
         tvMyPost = (TextView) findViewById(R.id.tvMyPost);
         tvRequests = (TextView) findViewById(R.id.tvRequests);
         tvMyNetwork = (TextView) findViewById(R.id.tvMyNetwork);
+        ivPostFilter = (ImageView) findViewById(R.id.ivPostFilter);
     }
 }
