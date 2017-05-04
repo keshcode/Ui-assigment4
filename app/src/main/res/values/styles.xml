@@ -7,16 +7,16 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
     <!--Cutome Textview style for Bottom Bar-->
     <style name="Bottombartv">
         <item name="android:paddingTop">@dimen/spacing_tiny</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textSize">@dimen/font_xsmall</item>
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:gravity">center_horizontal</item>
+
     </style>
 
     <!--Custome Toolbar Image View Layout-->
@@ -38,7 +38,6 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:drawablePadding">@dimen/spacing_tiny</item>
         <item name="android:layout_marginStart">@dimen/spacing_tiny</item>
-
     </style>
 
     <style name="DrawerllStyle">
@@ -49,8 +48,13 @@
         <item name="android:layout_marginBottom">@dimen/spacing_large</item>
     </style>
 
-    <style name="CustomRatingBar">
-        <item name="android:colorControlActivated">#f6a623</item>
-        <item name="android:colorControlNormal">#b7b7b7</item>
+    <style name="TvTheme">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/font_small</item>
     </style>
+
+
+
 </resources>
+

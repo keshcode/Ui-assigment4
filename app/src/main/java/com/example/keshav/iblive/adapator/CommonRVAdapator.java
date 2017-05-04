@@ -17,25 +17,25 @@ import com.example.keshav.iblive.constant.Constants;
  */
 
 public class CommonRVAdapator extends RecyclerView.Adapter<CommonRVAdapator.ViewHolder> implements Constants {
-    private int mode;
+    private int mMode;
 
     /**
      * @param mode mode of adaptor to be used
      */
     public CommonRVAdapator(final int mode) {
-        this.mode = mode;
+        this.mMode = mode;
     }
 
     @Override
     public CommonRVAdapator.ViewHolder onCreateViewHolder(final ViewGroup parent, final int viewType) {
-        if (mode == MODE_DISCOVER || mode == MODE_MYPOST) {
+        if (mMode == MODE_DISCOVER || mMode == MODE_MYPOST) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_discover_mypost, parent, false);
             return new ViewHolder(view);
-        } else if (mode == MODE_MYNETWORK) {
+        } else if (mMode == MODE_MYNETWORK) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_mynetwork, parent, false);
             return new ViewHolder(view);
         }
-        else if(mode == MODE_NEW_REQUEST){
+        else if(mMode == MODE_NEW_REQUEST){
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_new_request,parent,false);
             return new ViewHolder(view);
         }
@@ -83,12 +83,12 @@ public class CommonRVAdapator extends RecyclerView.Adapter<CommonRVAdapator.View
             ivDiscover = (ImageView) itemView.findViewById(R.id.ivDiscover);
             ivAddImage = (ImageView) itemView.findViewById(R.id.ivAddImage);
 
-            if (mode == MODE_DISCOVER) {
+            if (mMode == MODE_DISCOVER) {
                 tvCardDel.setVisibility(View.GONE);
                 tvCardEdit.setVisibility(View.GONE);
                 swCardSwitch.setVisibility(View.GONE);
 
-            } else if (mode == MODE_MYPOST) {
+            } else if (mMode == MODE_MYPOST) {
                 tvCardDel.setVisibility(View.VISIBLE);
                 tvCardEdit.setVisibility(View.VISIBLE);
                 swCardSwitch.setVisibility(View.VISIBLE);

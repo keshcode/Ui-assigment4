@@ -13,10 +13,7 @@
         android:background="@drawable/curved_boundry"
         android:orientation="vertical">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rvMyNetwork"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+       <include layout="@layout/recycler_view"/>
     </LinearLayout>
 
 </LinearLayout>

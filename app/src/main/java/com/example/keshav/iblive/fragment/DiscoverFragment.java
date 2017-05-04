@@ -25,7 +25,7 @@ public class DiscoverFragment extends Fragment implements Constants {
     public View onCreateView(final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_discover, container, false);
         CommonRVAdapator commonRVAdapator = new CommonRVAdapator(MODE_DISCOVER);
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rvDiscover);
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rvCommon);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(commonRVAdapator);
         return view;

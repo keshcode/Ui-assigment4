@@ -1,10 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="@dimen/spacing_small"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/spacing_xsmall">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -25,55 +23,50 @@
 
             <TextView
                 android:id="@+id/tvCardHeading"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/TvTheme"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/spacing_normal"
-                android:gravity="center"
                 android:text="Explore Pairs"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font_large" />
 
             <TextView
                 android:id="@+id/tvCardLocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/TvTheme"
                 android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
                 android:layout_margin="@dimen/spacing_tiny"
                 android:drawablePadding="@dimen/spacing_tiny"
                 android:drawableStart="@drawable/location_icon"
-                android:layout_centerVertical="true"
                 android:paddingEnd="@dimen/spacing_tiny"
                 android:text="Paris"
                 android:textColor="@color/colorAccent" />
 
             <TextView
                 android:id="@+id/tvCardDel"
-                android:padding="@dimen/spacing_tiny"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/TvTheme"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="@dimen/spacing_normal"
                 android:layout_marginStart="@dimen/spacing_normal"
-                android:drawableStart="@drawable/icon_trash" />
+                android:drawableStart="@drawable/icon_trash"
+                android:padding="@dimen/spacing_tiny" />
 
             <TextView
                 android:id="@+id/tvCardEdit"
-                android:layout_width="wrap_content"
-                android:padding="@dimen/spacing_tiny"
-                android:layout_height="wrap_content"
+                style="@style/TvTheme"
                 android:layout_alignParentTop="true"
                 android:layout_centerVertical="true"
                 android:layout_toStartOf="@+id/tvCardDel"
                 android:drawableStart="@drawable/icon_edit"
+                android:padding="@dimen/spacing_tiny"
                 android:textColor="@color/colorAccent" />
 
         </RelativeLayout>
 
         <TextView
             android:id="@+id/tvSendRequest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/TvTheme"
             android:layout_alignBottom="@+id/ivDiscover"
             android:layout_alignParentEnd="true"
             android:layout_margin="@dimen/spacing_small"
@@ -87,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/ivDiscover"
-            android:layout_margin="@dimen/spacing_small" />
+            android:layout_margin="@dimen/spacing_small"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -105,8 +98,7 @@
 
         <TextView
             android:id="@+id/tvTravler"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/TvTheme"
             android:layout_margin="@dimen/spacing_small"
             android:layout_toEndOf="@+id/ivAddImage"
             android:paddingBottom="@dimen/spacing_xsmall"
@@ -114,37 +106,35 @@
 
         <TextView
             android:id="@+id/tvduration"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/TvTheme"
             android:layout_alignBaseline="@+id/tvComment"
             android:layout_toStartOf="@+id/tvComment"
+            android:gravity="center_vertical"
             android:drawablePadding="@dimen/spacing_tiny"
             android:drawableStart="@drawable/icon_timer"
-            android:gravity="center"
             android:text="6d 2h left"
             android:textSize="@dimen/font_small" />
 
         <TextView
             android:id="@+id/tvComment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/TvTheme"
+            android:gravity="center"
             android:layout_alignParentEnd="true"
             android:drawableStart="@drawable/icon_comment"
-            android:gravity="center"
             android:text="222 Reviews"
             android:textSize="@dimen/font_small" />
 
         <RatingBar
-            style="?android:ratingBarStyleSmall"
             android:id="@+id/rbCard"
+            style="?android:ratingBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/tvTravler"
             android:layout_alignBottom="@+id/tvduration"
             android:layout_marginStart="@dimen/spacing_tiny"
             android:layout_toEndOf="@+id/ivAddImage"
-            android:numStars="6"
             android:isIndicator="false"
+            android:numStars="6"
             android:paddingTop="@dimen/spacing_tiny" />
     </RelativeLayout>
 
@@ -157,8 +147,7 @@
 
         <TextView
             android:id="@+id/tvCardContant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/TvTheme"
             android:text="Lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet, consectetur lorem ipsum."
             android:textSize="@dimen/font_small" />
 

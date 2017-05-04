@@ -23,7 +23,7 @@ public class MyPostFragment extends Fragment implements Constants {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_my_post, container, false);
         CommonRVAdapator commonRVAdapator = new CommonRVAdapator(MODE_MYPOST);
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rvMypost);
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rvCommon);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(commonRVAdapator);
         return view;

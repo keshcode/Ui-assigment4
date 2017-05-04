@@ -3,34 +3,41 @@
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:layout_alignParentBottom="true"
-    android:background="@color/colorPrimaryDark"
-    android:orientation="horizontal"
-    >
+    android:orientation="horizontal">
 
     <TextView
         style="@style/Bottombartv"
+        android:id="@+id/tvdiscover"
+        android:background="@drawable/selector_bottom_bar_btn"
         android:drawableTop="@drawable/discover_icon"
         android:text="@string/discover" />
 
     <TextView
         style="@style/Bottombartv"
+        android:id="@+id/tvMap"
+        android:background="@drawable/selector_bottom_bar_btn"
         android:drawableTop="@drawable/map"
         android:text="@string/map" />
 
     <TextView
         style="@style/Bottombartv"
+        android:id="@+id/tvMyPost"
+        android:background="@drawable/selector_bottom_bar_btn"
         android:drawableTop="@drawable/my_post"
         android:text="@string/my_posts" />
 
     <TextView
         style="@style/Bottombartv"
+        android:id="@+id/tvRequests"
+        android:background="@drawable/selector_bottom_bar_btn"
         android:drawableTop="@drawable/request"
         android:text="@string/requests" />
 
     <TextView
         style="@style/Bottombartv"
+        android:id="@+id/tvMyNetwork"
+        android:background="@drawable/selector_bottom_bar_btn"
         android:drawableTop="@drawable/my_network"
-        android:layout_weight="1.04"
         android:text="@string/my_network" />
 
 </LinearLayout>

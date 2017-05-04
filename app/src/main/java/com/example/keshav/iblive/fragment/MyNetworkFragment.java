@@ -23,7 +23,7 @@ public class MyNetworkFragment extends Fragment implements Constants {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_my_network, container, false);
         CommonRVAdapator commonRVAdapator = new CommonRVAdapator(MODE_MYNETWORK);
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rvMyNetwork);
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rvCommon);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(commonRVAdapator);
         return view;
